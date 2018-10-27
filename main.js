@@ -1,4 +1,7 @@
-const n = 4;
+window.addEventListener('load',(e) => {
+  const n = 4;
+  buildSomthg(n)
+})
 function quad(number) {
   return number * number;
 }
@@ -68,4 +71,3 @@ function buildSomthg(n) {
   console.log(template);
   return template 
 }
-console.log(buildSomthg(n));
