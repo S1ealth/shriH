@@ -1,6 +1,6 @@
-let array = [5,2,1,4,3]
+let array = [0,10,9,-1,-2,-3,-4,-5,-20]
 function maxValue(array) {
-  let maxNumber = 0;
+  let maxNumber = array[0];
   for (let i = 0; i < array.length; i++) {
     if(array[i] > maxNumber) {
       maxNumber = array[i]
