@@ -35,7 +35,7 @@ let array = [4, -5, 6, 8, -20, 1, 0, 7, 15, 19];
 // sort2(array);
 function bubleSort(array) {
   let last = array.length - 1;
-  for (let i = 0; i < last; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     for (let i = 0; i < last; i++) {
       const number1 = array[i];
       const number2 = array[i + 1];
@@ -49,7 +49,20 @@ function bubleSort(array) {
   return array;
 }
 console.log(bubleSort(array));
+function insertSorting(array) {
+  let last = array.length - 2;
+  let lastNum = array[last];
+  for (last; last > 0; last--) {
 
+    for (let i = last-1; i > 0; i--) {
+
+    }
+    // move
+    // shift them
+  }
+  return array
+}
+console.log(insertSorting(array));
 // let a = 5;
 // let b = 11;
 // let c = 0;
