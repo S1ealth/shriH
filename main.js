@@ -1,4 +1,4 @@
-let array = [4, 6, 8, 1, 0, 7, 15, 19];
+let array = [4, -5, 6, 8, -20, 1, 0, 7, 15, 19];
 // function maxValue(array) {
 //   let maxNumber = array[0];
 //   let maxNumberIndex = 0;
