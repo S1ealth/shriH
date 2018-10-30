@@ -3,9 +3,8 @@ function maxValue(array) {
   let maxNumber = array[0];
   for (let i = 0; i < array.length; i++) {
     if(array[i] > maxNumber) {
-      maxNumber = array[i]
+      maxNumber = i
     }
-    
   }
   console.log(maxNumber);
   return maxNumber
