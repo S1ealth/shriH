@@ -1,4 +1,4 @@
-let array = [0,25,10,-1,-2,-3,-4,-5,-20]
+let array = [5,25,10,-1,-2,-3,-4,-5,-20]
 function maxValue(array) {
   let maxNumber = array[0];
   let maxNumberIndex = 0;
@@ -11,27 +11,30 @@ function maxValue(array) {
   console.log(maxNumberIndex);
   return maxNumberIndex
 }
-maxValue(array);
+// maxValue(array);
 function sort2(array) {
-  let lastIndexPosition = array.length-1 // b
-  console.log(lastIndexPosition);
+// unsorted array controller
+console.log(array.length);
+for (let lastIndex = array.length-1; lastIndex > 0; lastIndex--) {
+  // find max number and it's index in iteration
   let maxNumberIndex = 0;
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i])
-    if(array[i] > array[maxNumberIndex]) {
-      maxNumberIndex = i; // a
-      let a = array[maxNumberIndex];
-      let b = array[lastIndexPosition];
-      let c;
-      c = a;
-      a = b;
-      b = c;
-      array[i] = a;
-      array[lastIndexPosition] = b;
-      lastIndexPosition = lastIndexPosition-1;
-      console.log(array);
+  // console.log(maxNumber)
+  for (let i = 0; i < lastIndex; i++) {
+    if (array[i] > array[maxNumberIndex]) {
+      maxNumberIndex = i;
+      console.log(array[maxNumberIndex]);
     }
   }
+  // swap positions
+  array[lastIndex];// a
+  array[maxNumberIndex]; //b
+  let c = array[maxNumberIndex]; //save a to c
+  array[maxNumberIndex] = array[lastIndex] // swap
+  array[lastIndex] = c// restore
+  console.log(c);
+
+}
+console.log(array);
   return array;
 }
 sort2(array);
