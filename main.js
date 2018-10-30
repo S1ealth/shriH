@@ -1,13 +1,15 @@
-let array = [0,10,9,-1,-2,-3,-4,-5,-20]
+let array = [0,25,10,-1,-2,-3,-4,-5,-20]
 function maxValue(array) {
   let maxNumber = array[0];
+  let maxNumberIndex = 0;
   for (let i = 0; i < array.length; i++) {
     if(array[i] > maxNumber) {
-      maxNumber = i
+      maxNumber = array[i];
+      maxNumberIndex = i;
     }
   }
-  console.log(maxNumber);
-  return maxNumber
+  console.log(maxNumberIndex);
+  return maxNumberIndex
 }
 maxValue(array);
 // function bubleSort(array) {
