@@ -1,4 +1,4 @@
-let array = [5, 25, 10, -1, -2, -3, -4, -5, -20]
+let array = [4, 6, 8, 1, 0, 7, 15, 19];
 function maxValue(array) {
   let maxNumber = array[0];
   let maxNumberIndex = 0;
@@ -8,21 +8,18 @@ function maxValue(array) {
       maxNumberIndex = i;
     }
   }
-  console.log(maxNumberIndex);
   return maxNumberIndex
 }
 // maxValue(array);
 function sort2(array) {
   // unsorted array controller
-  console.log(array.length);
   for (let lastIndex = array.length - 1; lastIndex > 0; lastIndex--) {
     // find max number and it's index in iteration
     let maxNumberIndex = 0;
     // console.log(maxNumber)
-    for (let i = 0; i < lastIndex; i++) {
+    for (let i = 0; i <= lastIndex; i++) {
       if (array[i] > array[maxNumberIndex]) {
         maxNumberIndex = i;
-        console.log(array[maxNumberIndex]);
       }
     }
     // swap positions
@@ -31,10 +28,8 @@ function sort2(array) {
     let c = array[maxNumberIndex]; //save a to c
     array[maxNumberIndex] = array[lastIndex] // swap
     array[lastIndex] = c // restore
-    console.log(c);
 
   }
-  console.log(array);
   return array;
 }
 sort2(array);
