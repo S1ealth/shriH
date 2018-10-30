@@ -34,16 +34,17 @@ let array = [4, -5, 6, 8, -20, 1, 0, 7, 15, 19];
 // }
 // sort2(array);
 function bubleSort(array) {
-  for (let i = 0; i < array.length - 1; i++) {
-    for (let i = 0; i < array.length - 1; i++) {
+  let last = array.length - 1;
+  for (let i = 0; i < last; i++) {
+    for (let i = 0; i < last; i++) {
       const number1 = array[i];
       const number2 = array[i + 1];
       if (number1 > number2) {
-        let c = array[i + 1];
-        array[i + 1] = array[i];
-        array[i] = c;
+        array[i+1] = number1;
+        array[i] = number2;
       }
     }
+     last = last-1
   }
   return array;
 }
