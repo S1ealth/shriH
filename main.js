@@ -1,15 +1,15 @@
 let array = [4, 6, 8, 1, 0, 7, 15, 19];
-function maxValue(array) {
-  let maxNumber = array[0];
-  let maxNumberIndex = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > maxNumber) {
-      maxNumber = array[i];
-      maxNumberIndex = i;
-    }
-  }
-  return maxNumberIndex
-}
+// function maxValue(array) {
+//   let maxNumber = array[0];
+//   let maxNumberIndex = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] > maxNumber) {
+//       maxNumber = array[i];
+//       maxNumberIndex = i;
+//     }
+//   }
+//   return maxNumberIndex
+// }
 // maxValue(array);
 function sort2(array) {
   // unsorted array controller
@@ -32,8 +32,22 @@ function sort2(array) {
   }
   return array;
 }
-sort2(array);
-// bubleSort(array);
+// sort2(array);
+function bubleSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      const number1 = array[i];
+      const number2 = array[i + 1];
+      if (number1 > number2) {
+        let c = array[i + 1];
+        array[i + 1] = array[i];
+        array[i] = c;
+      }
+    }
+  }
+  return array;
+}
+console.log(bubleSort(array));
 
 // let a = 5;
 // let b = 11;
